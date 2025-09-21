@@ -1,0 +1,52 @@
+.search_container {
+  margin: 4rem auto;
+  width: calc(100vw - 8rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.5rem;
+}
+
+.input_wrapper, select {
+    height: 100%;
+}
+
+.input_wrapper {
+    background-color: hsl(0, 100%, 100%);
+    width: 30rem;
+    display: flex;   
+    border-radius: .4rem;
+    box-shadow: 0 0px 10px .5px hsl(200, 15%, 8%, .1); 
+}
+
+.input_wrapper .img {
+    height: 100%;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.input_wrapper .img ion-icon {
+    color: hsl(0, 0%, 50%);
+    height: 100%;
+    width: 1.15rem;
+}
+
+.input_wrapper input {
+    border-radius: .4rem;
+    width: 85%;
+    border: none;
+    outline: none;
+    padding-right: 1rem;
+}
+
+select {
+    cursor: pointer;
+    outline: none;
+    background-color: hsl(0, 100%, 100%);
+    padding: 1rem 2rem;
+    border-radius: .4rem;
+    border: none;
+    box-shadow: 0 0px 5px .5px hsl(200, 15%, 8%, .1); 
+}
