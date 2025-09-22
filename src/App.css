@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
+:root {
+  --header_padding: 4rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,4 +13,12 @@
 
 body {
   background-color: hsl(0, 0%, 99%);
+}
+
+.search_container, main {
+  width: calc(100vw - (var(--header_padding) * 2));
+}
+
+main {
+  margin: 0 auto;
 }

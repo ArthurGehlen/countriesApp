@@ -1,5 +1,5 @@
 header {
-  padding: 1rem 4rem;
+  padding: 1rem var(--header_padding);
   height: 5rem;
   display: flex;
   align-items: center;

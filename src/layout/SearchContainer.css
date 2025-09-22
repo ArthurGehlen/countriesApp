@@ -1,13 +1,12 @@
 .search_container {
   margin: 4rem auto;
-  width: calc(100vw - 8rem);
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 3.5rem;
 }
 
-.input_wrapper, select {
+.input_wrapper, .filter_wrapper {
     height: 100%;
 }
 
@@ -41,12 +40,40 @@
     padding-right: 1rem;
 }
 
-select {
+.filter_wrapper {
+    position: relative;
+    width: 13rem;
+}
+
+.filter {
     cursor: pointer;
-    outline: none;
-    background-color: hsl(0, 100%, 100%);
-    padding: 1rem 2rem;
+    height: 100%;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 0px 10px .5px hsl(200, 15%, 8%, .1); 
+    padding: .8rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-radius: .4rem;
+}
+
+.filter_menu {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    padding: 1rem;
+    background-color: hsl(0, 0%, 100%);
+    margin-top: .4rem;
+    flex-direction: column;
+    box-shadow: 0 0px 10px .5px hsl(200, 15%, 8%, .1); 
+    border-radius: .4rem;
+}
+
+.filter_menu button {
+    background-color: transparent;
     border: none;
-    box-shadow: 0 0px 5px .5px hsl(200, 15%, 8%, .1); 
+    text-align: start;
+    padding: .4rem;
+    cursor: pointer;
+    font-weight: 600;
 }
