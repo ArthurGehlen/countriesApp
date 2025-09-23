@@ -3,77 +3,81 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
   height: 3.5rem;
+  min-height: fit-content;
 }
 
-.input_wrapper, .filter_wrapper {
-    height: 100%;
+.input_wrapper,
+.filter_wrapper {
+  height: 100%;
 }
 
 .input_wrapper {
-    background-color: hsl(0, 100%, 100%);
-    width: 30rem;
-    display: flex;   
-    border-radius: .4rem;
-    box-shadow: 0 0px 10px .5px hsl(200, 15%, 8%, .1); 
+  background-color: hsl(0, 100%, 100%);
+  width: 30rem;
+  display: flex;
+  border-radius: 0.4rem;
+  box-shadow: 0 0px 10px 0.5px hsl(200, 15%, 8%, 0.1);
 }
 
 .input_wrapper .img {
-    height: 100%;
-    width: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: center;    
+  height: 100%;
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .input_wrapper .img ion-icon {
-    color: hsl(0, 0%, 50%);
-    height: 100%;
-    width: 1.15rem;
+  color: hsl(0, 0%, 50%);
+  height: 100%;
+  width: 1.15rem;
 }
 
 .input_wrapper input {
-    border-radius: .4rem;
-    width: 85%;
-    border: none;
-    outline: none;
-    padding-right: 1rem;
+  border-radius: 0.4rem;
+  width: 85%;
+  border: none;
+  outline: none;
+  padding-right: 1rem;
 }
 
 .filter_wrapper {
-    position: relative;
-    width: 13rem;
+  position: relative;
+  width: 13rem;
 }
 
 .filter {
-    cursor: pointer;
-    height: 100%;
-    background-color: hsl(0, 0%, 100%);
-    box-shadow: 0 0px 10px .5px hsl(200, 15%, 8%, .1); 
-    padding: .8rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: .4rem;
+  cursor: pointer;
+  height: 100%;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 0px 10px 0.5px hsl(200, 15%, 8%, 0.1);
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.4rem;
 }
 
 .filter_menu {
-    width: 100%;
-    position: absolute;
-    right: 0;
-    padding: 1rem;
-    background-color: hsl(0, 0%, 100%);
-    margin-top: .4rem;
-    flex-direction: column;
-    box-shadow: 0 0px 10px .5px hsl(200, 15%, 8%, .1); 
-    border-radius: .4rem;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  padding: 1rem;
+  background-color: hsl(0, 0%, 100%);
+  margin-top: 0.4rem;
+  flex-direction: column;
+  box-shadow: 0 0px 10px 0.5px hsl(200, 15%, 8%, 0.1);
+  border-radius: 0.4rem;
 }
 
 .filter_menu button {
-    background-color: transparent;
-    border: none;
-    text-align: start;
-    padding: .4rem;
-    cursor: pointer;
-    font-weight: 600;
+  background-color: transparent;
+  border: none;
+  text-align: start;
+  padding: 0.4rem;
+  cursor: pointer;
+  font-weight: 600;
 }

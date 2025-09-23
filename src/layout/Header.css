@@ -10,7 +10,7 @@ header {
 
 header h1 {
   font-weight: 800;
-  font-size: 1.75rem;
+  font-size: clamp(1rem, 1.662vw + .5035rem, 1.75rem);
 }
 
 header button {

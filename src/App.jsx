@@ -11,7 +11,7 @@ import Card from "./components/Card";
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [filterByRegion, setFilterByRegion] = useState("Filter by Region");
-  const [data, setData] = useState(null);
+  const [data, setData] = useState(null); 
 
   const fetch_data = async () => {
     // tive q usar try/catch nessa bosta... mas deu certo
@@ -41,8 +41,17 @@ function App() {
       />
       <main>
         {data &&
-          data.map((o) => {
-            return <p key={o.name}>{o.name}</p>;
+          data.map((country) => {
+            return (
+              <Card
+                key={country.name}
+                name={country.name}
+                population={new Intl.NumberFormat().format(country.population)}
+                region={country.region}
+                capital={country.capital}
+                image={country.flags["svg"]}
+              />
+            );
           })}
       </main>
     </>

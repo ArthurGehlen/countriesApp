@@ -1,0 +1,26 @@
+.card {
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 1px 15px 1px hsl(200, 15%, 8%, 0.2);
+  width: 100%;
+  height: 24.5rem;
+  border-radius: 0.6rem;
+}
+
+.card img {
+  border-radius: 0.6rem 0.6rem 0 0;
+  width: 100%;
+  height: 14rem;
+}
+
+.card .country_info {
+  padding: 1rem;
+}
+
+.card .infos {
+  margin-top: 0.8rem;
+}
+
+.card .infos p {
+  color: hsl(200, 15%, 8%);
+  font-weight: 600;
+}
