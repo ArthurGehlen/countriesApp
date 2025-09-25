@@ -23,3 +23,12 @@ header button {
   font-weight: 600;
   cursor: pointer;
 }
+
+.dark_mode header {
+  background-color: hsl(209, 23%, 22%);
+}
+
+.dark_mode header h1,
+.dark_mode header button {
+  color: hsl(0, 0%, 100%);
+}

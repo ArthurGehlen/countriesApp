@@ -42,6 +42,7 @@
   border: none;
   outline: none;
   padding-right: 1rem;
+  background: transparent;
 }
 
 .filter_wrapper {
@@ -81,3 +82,18 @@
   cursor: pointer;
   font-weight: 600;
 }
+
+/* DARK MODE */
+.dark_mode .search_container .input_wrapper,
+.dark_mode .search_container .filter,
+.dark_mode .search_container .filter_menu {
+  background-color: hsl(209, 23%, 22%);
+}
+
+.dark_mode .search_container .input_wrapper .img ion-icon,
+.dark_mode .search_container input,
+.dark_mode .search_container input::placeholder,
+.dark_mode .search_container .filter,
+.dark_mode .search_container .filter_menu button  {
+  color: hsl(0, 0%, 100%);
+} 

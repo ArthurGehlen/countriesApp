@@ -1,18 +1,26 @@
 import "./Card.css";
 
-function Card({ image, name, population, region, capital }) {
+function Card({ image, name, population, region, capital, handle_click }) {
   return (
     <div className="card">
-      <img src={image} alt="Image" />
+      <div className="img_wrapper">
+        <img src={image} alt="Image" name={name} onClick={handle_click} />
+      </div>
       <div className="country_info">
         <h3>{name}</h3>
 
         <div className="infos">
           <p>
-            Population: <span>{population}</span>
+            <span>Population:</span> {population}
           </p>
-          <p>Region: {region}</p>
-          <p>Capital: {capital}</p>
+          <p>
+            <span>Region:</span> {region}
+          </p>
+          {capital && (
+            <p>
+              <span>Capital:</span> {capital}
+            </p>
+          )}
         </div>
       </div>
     </div>

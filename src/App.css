@@ -24,5 +24,10 @@ main {
   margin: 2rem auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
-  gap: 1rem;
+  gap: 2rem;
+}
+ 
+/* DARK MODE */
+.dark_mode {
+  background-color: hsl(207, 26%, 17%);
 }
