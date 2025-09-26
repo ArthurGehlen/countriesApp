@@ -15,11 +15,16 @@ function Home({ setDetailCountry }) {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [filterByRegion, setFilterByRegion] = useState("Filter by Region");
   const [data, setData] = useState(null);
+  const [search, setSearch] = useState("");
 
   const change_theme = () => {
     document.body.classList.toggle("dark_mode");
     setIsDarkMode(!isDarkMode);
   };
+
+  /*
+    LEMBRAR DE NÃO DEIXAR CONSOLE.LOG ESCRITO QUANDO FOR FAZER COMMIT :)
+  */
 
   const goto_details = (e) => {
     setDetailCountry(e.target.name);
@@ -47,11 +52,22 @@ function Home({ setDetailCountry }) {
       <SearchContainer
         handle_filter={(e) => setFilterByRegion(e.target.value)}
         current_filter={filterByRegion}
+        handle_search={(e) => setSearch(e.target.value)}
       />
+
       <main>
         {data &&
-          data.map((country) => {
-            return (
+          data
+            .filter((country) => {
+              const match_name = country.name
+                .toLowerCase()
+                .includes(search.toLowerCase());
+              const match_region =
+                filterByRegion === "Filter by Region" ||
+                country.region === filterByRegion;
+              return match_name && match_region;
+            })
+            .map((country) => (
               <Card
                 key={country.name}
                 name={country.name}
@@ -61,8 +77,7 @@ function Home({ setDetailCountry }) {
                 image={country.flags["png"]}
                 handle_click={goto_details}
               />
-            );
-          })}
+            ))}
       </main>
     </>
   );

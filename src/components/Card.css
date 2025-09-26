@@ -2,6 +2,7 @@
   background-color: hsl(0, 0%, 100%);
   box-shadow: 0 1px 15px 1px hsl(200, 15%, 8%, 0.2);
   width: 100%;
+  max-width: 20rem;
   height: 24.5rem;
   border-radius: 0.4rem;
 }
@@ -10,6 +11,7 @@
   width: 100%;
   height: 12rem;
   overflow: hidden;
+  border-radius: 0.4rem 0.4rem 0 0;
 }
 
 .card img {
