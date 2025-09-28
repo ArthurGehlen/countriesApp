@@ -1,0 +1,44 @@
+.detail_page {
+  margin: 3.5rem auto;
+}
+
+.country_detailed_infos_wrapper {
+  margin-top: 3.5rem;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.country_detailed_infos_wrapper img {
+  max-width: 100%;
+  width: 30rem;
+}
+
+.country_detailed_infos {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.more_infos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.basic_info p:not(:first-child),
+.advanced_info p:not(:first-child) {
+  margin-top: 0.8rem;
+}
+
+.basic_info p,
+.advanced_info p {
+  font-weight: 300;
+}
+
+.basic_info p span,
+.advanced_info p span {
+  font-weight: 800;
+}

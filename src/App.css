@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
 :root {
-  --header_padding: 2rem;
+  --header_padding: 4rem;
 }
 
 * {
@@ -16,6 +16,7 @@ body {
 }
 
 .search_container,
+.detail_page,
 main {
   width: calc(100vw - (var(--header_padding) * 2));
 }
@@ -30,4 +31,10 @@ main {
 /* DARK MODE */
 .dark_mode {
   background-color: hsl(207, 26%, 17%);
+}
+
+@media screen and (max-width: 476px) {
+  :root {
+    --header_padding: 2rem;
+  }
 }

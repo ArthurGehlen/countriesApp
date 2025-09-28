@@ -27,8 +27,8 @@ function Home({ setDetailCountry }) {
   */
 
   const goto_details = (e) => {
-    setDetailCountry(e.target.name);
-    navigator(`/${e.target.name}`);
+    setDetailCountry(e.target.id);
+    navigator(`/${e.target.id}`);
   };
 
   const fetch_data = async () => {
