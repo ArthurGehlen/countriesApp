@@ -2,6 +2,24 @@
   margin: 3.5rem auto;
 }
 
+.detail_page a {
+  height: 2.25rem;
+  max-width: 8rem;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 1px 10px 1px hsl(200, 15%, 8%, 0.2);
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  color: hsl(200, 15%, 8%);
+}
+
+.detail_page a ion-icon {
+  color: hsl(200, 15%, 8%);
+}
+
 .country_detailed_infos_wrapper {
   margin-top: 3.5rem;
   width: 100%;
@@ -41,4 +59,45 @@
 .basic_info p span,
 .advanced_info p span {
   font-weight: 800;
+}
+
+.border_countries_wrapper {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  max-width: 35rem;
+  font-weight: 600;
+}
+
+.border_contries {
+  padding: 0.2rem 1rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0.2rem;
+  box-shadow: 0 1px 15px 1px hsl(200, 15%, 8%, 0.2);
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 476px) {
+  .country_detailed_infos {
+    margin-top: 1rem;
+  }
+}
+
+/* DARK MODE */
+.dark_mode .detail_page {
+  color: hsl(0, 0%, 100%);
+}
+
+.dark_mode a {
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+}
+
+.dark_mode a ion-icon {
+  color: hsl(0, 0%, 100%);
+}
+
+.dark_mode .border_contries {
+  background-color: hsl(209, 23%, 22%);
 }

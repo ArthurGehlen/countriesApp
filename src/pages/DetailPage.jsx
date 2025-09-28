@@ -35,7 +35,10 @@ function DetailPage() {
     <>
       <Header dark_mode={isDarkMode} handle_click={change_theme} />
       <div className="detail_page">
-        <Link to={"/"}>Voltar</Link>
+        <Link to={"/"}>
+          <ion-icon name="arrow-back-outline"></ion-icon>
+          Back
+        </Link>
         {/* eu escrevi a classe dessa div inspirado :)*/}
         <div className="country_detailed_infos_wrapper">
           <img src={country.flag} alt="Flag" />
@@ -50,7 +53,8 @@ function DetailPage() {
                   <span>Native Name</span>: {country.nativeName}
                 </p>
                 <p>
-                  <span>Population</span>: {country.population}
+                  <span>Population</span>:{" "}
+                  {new Intl.NumberFormat().format(country.population)}
                 </p>
                 <p>
                   <span>Region</span>: {country.region}
@@ -78,12 +82,14 @@ function DetailPage() {
                 </p>
               </div>
             </div>
-            <p>
-              <span>Border Countries</span>:{" "}
-              {country.borders.map((b) => (
-                <span>{b}</span>
-              ))}
-            </p>
+            {country.borders && (
+              <p className="border_countries_wrapper">
+                <span>Border Countries</span>:{" "}
+                {country.borders.map((b) => (
+                  <span className="border_contries">{b}</span>
+                ))}
+              </p>
+            )}
           </div>
         </div>
       </div>
